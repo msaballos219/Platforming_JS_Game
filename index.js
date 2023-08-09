@@ -22,7 +22,7 @@ floorCollisions2D.forEach((row, y) => {
         new CollisionBlock({
           position: {
             x: x * 16,
-            y: y * 16,
+            y: y * 16,  
           },
         })
       )
