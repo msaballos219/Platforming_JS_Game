@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Game Title</title>
-    <style>
+    <title>Night Ride by Melvin Saballos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Your custom CSS -->
+</head>
+<!--   <style>
         body {
             background: black;
             font-family: Arial, sans-serif;
@@ -31,22 +36,50 @@
             margin: 20px;
             position: relative;
         }
-    </style>
-</head>
+    </style> -->
+<style>.game-area {
+    display: flex;
+    justify-content: center;
+    align-items: start; /* Aligns items to the top */
+}
+
+.controls-description {
+    margin-right: 20px; /* Spacing between the description and the canvas */
+    flex: 0 0 auto; /* Prevents the box from growing */
+    text-align: center; /* Centers the text inside the box */
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+</style>
 <body>
-    <!-- Navbar -->
-    <nav>
-        Your Game Title
+    <nav class="nes-container is-centered" style="background-color: gray;">
+        <h1>Knight Ride</h1>
     </nav>
 
-    <!-- Game Container -->
-    <div id="gameContainer">
-        <canvas></canvas>
-    </div>
+    <section class="nes-container is-rounded controls-description" style="background-color: brown;">
+        <p>Use <strong>WASD</strong> to move</p>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-        Copyright © 2023 Your Name
+    <main class="nes-container with-title is-centered" style="background-color: gray;">
+        <canvas class="nes-container is-rounded" id="gameCanvas" width="1024" height="576"></canvas>
+        <section class="nes-container is-rounded" style="background-color: brown;">
+            <p>A small game to test Javascript game creation capabilites.</p>
+        </section>
+        <section class="nes-container is-rounded">
+            <p>Contact me at: <a href="mailto:msaballos219@gmail.com">msaballos219@gmail.com</a></p>
+        </section>
+    </main>
+
+    <footer class="nes-container is-centered" style="background-color: gray;">
+        <ul class="icon-list">
+            <span> Crafted by Melvin Saballos </span>
+            <li><a href="yourTwitterLink"><i class="nes-icon twitter is-medium"></i></a></li>
+            <li><a href="yourFacebookLink"><i class="nes-icon facebook is-medium"></i></a></li>
+            <!-- Add more social media links as needed -->
+        </ul>
     </footer>
 
     <!-- Scripts -->
@@ -57,4 +90,5 @@
     <script src="./js/data/collisions.js"></script>
     <script src="index.js"></script>
 </body>
+
 </html>
