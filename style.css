@@ -1,15 +1,20 @@
 .game-area {
     display: flex;
     justify-content: center;
-    align-items: start; /* Aligns items to the top */
+    align-items: start; /
 }
 
 .controls-description {
     margin-right: 20px; /* Spacing between the description and the canvas */
     flex: 0 0 auto; /* Prevents the box from growing */
-    text-align: center; /* Centers the text inside the box */
+    text-align: center; 
 }
 
 ul, ol {
     list-style-type: none;
 }
+
+li {
+    display: inline-block; /* Or 'inline' depending on your layout */
+  }
+  
